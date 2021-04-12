@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-block">
+            <h1 class="text-block__title">Simple, traffic-based pricing</h1>
+            <p class="text-block__desc">Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+        <form class="form">
+            <div class="form__text">
+                <span class="form__text-pageviews">100K PAGEVIEWS</span>
+                <span class="form__text-general-price"><span class="form__text-price">$16</span> / month</span>
+                <input class="range-price__input " type="range" min="1" max="5" />
+                <div class="range-price__labels">
+                    <label>
+                        <input class="range-price__checkbox " type="checkbox" name="checkbox">
+                        <span class="range-price__label range-price__label--monthly ">Monthly
+                            Billing</span>
+
+                    </label>
+
+                    <span class="range-price__label range-price__label--yearly">Yearly Billing</span>
+                    <span class="range-price__discount ">25% discount</span>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="form__promotion">
+                <ul class="form__promotion-list promotion-list">
+                    <li>
+                        Unlimited websites
+                    </li>
+                    <li>
+                        100% data ownership
+                    </li>
+                    <li>
+                        Email reports
+                    </li>
+                </ul>
+                <button class="form__promotion-btn" type="submit">Start my trial</button>
+            </div>
+
+
+        </form>
+
+        <div class="trial">
+            <p>Your trial has been sucessfully started! </p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Manrope', sans-serif;
+            background: #F2F2F2;
+            position: relative;
+        }
+
+        .container {
+            margin: 0 auto;
+            background-color: #F1F5FE;
+            border-radius: 0px 0px 0px 191.5px;
+            background-size: 449px 449px;
+        }
+
+
+        .text-block {
+            padding-top: 90px;
+            margin-bottom: 50px;
+            background-image: url(./bg-circles.svg);
+            background-position: bottom center;
+            background-repeat: no-repeat;
+
+        }
+
+        .text-block__title {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 38px;
+            text-align: center;
+        }
+
+        .text-block__desc {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 60%;
+            background-color: white;
+            padding: 40px 46px 30px 46px;
+            box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+            border-radius: 8px;
+            margin-bottom: 136px;
+            color: #848EAD;
+        }
+
+        .form__text {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .form__text-pageviews {
+            order: 1;
+            font-size: 14px;
+            line-height: 19px;
+            margin: 0 auto 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .form__text-general-price {
+            order: 3;
+            margin: 0 auto 34px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form__text-price {
+
+            font-style: normal;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 55px;
+            letter-spacing: -1px;
+            color: #293356;
+            transition: .6s;
+            margin-right: 10px;
+        }
+
+        .form__promotion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .range-price__input {
+            -webkit-appearance: none;
+            outline: none;
+            background: none;
+            order: 2;
+            width: 100%;
+            height: 8px;
+            margin-bottom: 41px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .range-price__labels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ECF0FB;
+            margin-bottom: 24px;
+            order: 4;
+            padding-bottom: 38px;
+            order: 4;
+        }
+
+        label {
+            display: flex;
+            margin: 0;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .range-price__checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: inherit;
+        }
+
+        label .range-price__label--mothly {
+            position: relative;
+
+        }
+
+        label .range-price__label:before,
+        label .range-price__label:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transition: .3s;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        label .range-price__label:before {
+            right: 0;
+            height: 24px;
+            margin-top: -13px;
+            width: 46px;
+            border-radius: 12px;
+            background: #ddd;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, .4);
+            cursor: pointer;
+
+        }
+
+        label .range-price__label:after {
+            right: 25px;
+            height: 18px;
+            width: 18px;
+            margin-top: -10px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+
+        }
+
+        label .range-price__checkbox:checked+.range-price__label:before {
+            background: #7AEADF;
+        }
+
+        label .range-price__checkbox:checked+.range-price__label:after {
+            right: 4px;
+        }
+
+        label .range-price__checkbox:focus+.range-price__label:before {
+            box-shadow: 0 0 0 3px rgba(50, 150, 255, .2);
+        }
+
+        label .range-price__checkbox:disabled+.range-price__label {
+            opacity: .35;
+        }
+
+        label .range-price__checkbox:disabled+.range-price__label:before {
+            background: #CFD8EF;
+        }
+
+        .range-price__label {
+            font-size: 12px;
+            line-height: 16px;
+            padding-right: 55px;
+            color: #848EAD;
+        }
+
+        .range-price__label--yearly {
+            padding-left: 15px;
+            padding-right: 10px;
+        }
+
+        .range-price__discount {
+
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FF8D68;
+            background: #FEEDE8;
+            border-radius: 9.5px;
+            padding: 2px 4px;
+        }
+
+        .promotion-list {
+            padding: 0;
+            margin: 0 0 30px 0;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            list-style: none;
+        }
+
+        .promotion-list li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 21px;
+        }
+
+        .promotion-list li::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 12px;
+            height: 8px;
+            background: url("./path.svg") no-repeat;
+        }
+
+        .form__promotion-btn {
+            font-family: 'Manrope', sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            color: #BECDFF;
+            background: #293356;
+            border-radius: 20.5px;
+            padding: 12px 46px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        input[type='range'] {
+            order: 2;
+            width: 100%;
+            height: 8px;
+            margin-bottom: 41px;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #ECF0FB;
+            position: relative;
+        }
+
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: url('./slider.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 22px 13px;
+            background-color: #10D8C4;
+            box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+
+            transition: .2s;
+
+        }
+
+
+        .trial {
+            display: none;
+        }
+
+
+        .trial-show {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.1521);
+
+            display: block;
+            background: #293356;
+            border-radius: 10px;
+            -webkit-animation: fadeOut 2s linear forwards;
+            -moz-animation: fadeOut 2s linear forwards;
+            -o-animation: fadeOut 2s linear forwards;
+            -ms-animation: fadeOut 2s linear forwards;
+            animation: fadeOut 2s linear forwards;
+
+        }
+
+        .trial-show p {
+            padding: 5px 15px;
+            font-weight: 800;
+            font-size: 12px;
+            line-height: 38px;
+            text-align: center;
+            color: #BECDFF;
+
+        }
+
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+                -webkit-transform: bottom(50px);
+            }
+
+            99% {
+                opacity: 0;
+                -webkit-transform: bottom(50px)
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+               @media (min-width: 630px) {
+            .text-block {
+                padding-top: 100px;
+                margin-bottom: 90px;
+
+
+            }
+
+            .range-price__input {
+                order: 3;
+            }
+
+            .form__text-general-price {
+                order: 2;
+                margin: 0 0 20px 0;
+            }
+
+            .form__text-pageviews {
+                margin: 0;
+                    margin-top: -14px;
+            }
+
+            .form__promotion {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .form__text-price {
+
+
+                font-size: 40px;
+
+            }
+
+            .text-block__title {
+
+                font-size: 28px;
+
+            }
+
+            .text-block__desc {
+
+                font-size: 15px;
+
+            }
+
+            .promotion-list {
+                margin: 0;
+                margin-right: 10px;
+            }
+
+            .range-price__labels {
+
+                margin-left: auto;
+                padding-bottom: 45px;
+                margin-bottom: 32px;
+
+            }
+
+            label {
+                padding: 5px 5px 5px 86px;
+            }
+
+            .form {
+                width: 60%;
+            }
+        }
+
+        @media (min-width: 868px) {
+            .form {
+                width: 30%;
+            }
+
+        }
+
+    </style>
+<script>
+    const range = document.querySelector('.range-price__input');
+    const pageviews = document.querySelector('.form__text-pageviews');
+    const price = document.querySelector('.form__text-price');
+    const checkbox = document.querySelector('.range-price__checkbox');
+    const formBtn = document.querySelector('.form__promotion-btn');
+    const modal = document.querySelector('.trial');
+    const price_values = {
+        lowest: "8",
+        low: "12",
+        medium: "16",
+        high: "24",
+        highest: "36"
+    }
+
+    const price_values_discount = {
+        lowest: "6",
+        low: "9",
+        medium: "12",
+        high: "18",
+        highest: "27"
+    }
+
+
+    const changePrice = function (price_values) {
+        if (range.value === "5") {
+            price.textContent = `$${price_values.highest} `
+            pageviews.textContent = "1M pageviews"
+        }
+        else if (range.value === "4") {
+            price.textContent = `$${price_values.high} `
+            pageviews.textContent = "500k pageviews "
+        }
+        else if (range.value === "3") {
+            price.textContent = `$${price_values.medium} `
+            pageviews.textContent = "100k pageviews "
+        }
+        else if (range.value === "2") {
+            price.textContent = `$${price_values.low} `
+            pageviews.textContent = "50k pageviews "
+        }
+        else if (range.value === "1") {
+            price.textContent = `$${price_values.lowest} `
+            pageviews.textContent = "10k pageviews "
+        }
+    }
+
+    checkbox.addEventListener('change', function () {
+        if (!this.checked) {
+            range.addEventListener('change', changePrice(price_values))
+            price.style = "color:#293356; transition: .6s;"
+        } else {
+            range.addEventListener('change', changePrice(price_values_discount))
+            price.style = "color: #FF8D68;"
+        }
+    })
+
+    range.addEventListener('change', function () {
+        checkbox.checked ? changePrice(price_values_discount) : changePrice(price_values)
+    })
+
+    formBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.add('trial-show');
+
+
+
+    })
+
+
+
+
+
+</script>
